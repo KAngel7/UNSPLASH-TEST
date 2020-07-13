@@ -2,12 +2,13 @@
   padding: 20px;
 }
 
-.list-photo {
+.list-photo-wrapper {
   padding: 20px 0;
+  min-height: 200px;
 }
 
 .photo {
-  height: 100px;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
