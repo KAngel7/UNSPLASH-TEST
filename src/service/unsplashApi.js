@@ -8,8 +8,8 @@ const unsplashApi = axios.create({
   }
 });
 
-export const search = searchString => {
-  return unsplashApi.get(`/search/photos?query=${encodeURIComponent(searchString)}`);
+export const search = (searchString, page = 1, perPage = 16) => {
+  return unsplashApi.get(`/search/photos?query=${encodeURIComponent(searchString)}&page=${page}&per_page=${perPage}`);
 };
 
 export const getPhoto = id => {

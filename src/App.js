@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { search, getPhoto } from './service/unsplashApi';
+import SearchPhoto from './component/SearchPhoto';
 
 function App() {
   return (
@@ -9,6 +8,7 @@ function App() {
       <header className="app-header">
         SWAT UNSPLASH TAKE HOME
       </header>
+      <SearchPhoto />
     </div>
   );
 }

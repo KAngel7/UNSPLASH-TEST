@@ -1,0 +1,13 @@
+.search-photo {
+  padding: 20px;
+}
+
+.list-photo {
+  padding: 20px 0;
+}
+
+.photo {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
