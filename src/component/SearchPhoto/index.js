@@ -11,7 +11,7 @@ class SearchPhoto extends React.Component {
     this.state = {
       loading: !!urlParams.get('searchString'),
       searchString: urlParams.get('searchString') || "",
-      page: urlParams.get('page') || 1,
+      page: Number(urlParams.get('page')) || 1,
       data: {
         results: []
       }
@@ -27,10 +27,12 @@ class SearchPhoto extends React.Component {
     window.history.pushState(null, null, `?searchString=${encodeURIComponent(this.state.searchString)}&page=${this.state.page}`);
     search(this.state.searchString, this.state.page).then(result => {
       this.setState({ data: result.data });
+    }).catch(err => {
+      // todo
     }).finally(() => {
       this.setState({ loading: false });
     });
-  }
+  };
   searchPhotoDebounce = debounce(this.searchPhoto, 200);
   handleChangeSearchString = e => {
     this.setState({ searchString: e.currentTarget.value, page: 1 }, this.searchPhotoDebounce);

@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build-github": "set PUBLIC_URL=https://kangel7.github.io/UNSPLASH-TEST&& react-scripts build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
